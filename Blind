@@ -1,0 +1,1090 @@
+Blind app _ share
+
+** Manifest file ** //share source
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+-<manifest package="com.example.parkyunho.olimpic" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+-<application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:allowBackup="true">
+
+
+-<activity android:label="@string/app_name" android:name=".MainActivity">
+
+
+-<intent-filter>
+
+<action android:name="android.intent.action.MAIN"/>
+
+<category android:name="android.intent.category.LAUNCHER"/>
+
+</intent-filter>
+
+</activity>
+
+<activity android:label="@string/title_activity_select_game" android:name=".SelectGame"> </activity>
+
+<activity android:label="@string/title_activity_archery" android:name=".Archery"> </activity>
+
+<activity android:label="@string/title_activity_bowling" android:name=".bowling"> </activity>
+
+<activity android:label="@string/title_activity_play_archery" android:name=".playArchery"> </activity>
+
+<activity android:label="@string/title_activity_play_bowling" android:name=".playBowling"> </activity>
+
+</application>
+
+</manifest>
+
+
+
+
+
+
+
+
+** activity_main.xml ** //share source
+
+<?xml version="1.0"?>
+
+-<RelativeLayout tools:context=".MainActivity" android:background="@color/bright_foreground_inverse_material_light" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ImageView android:layout_height="60dp" android:layout_width="100dp" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:layout_above="@+id/textOlimpic" android:src="@drawable/oli_2"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:textSize="50dp" android:textColor="@color/background_floating_material_dark" android:id="@+id/textOlimpic" android:text="Olimpic"/>
+
+<ImageView android:layout_height="60dp" android:layout_width="100dp" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:src="@drawable/oli_1" android:layout_below="@+id/textOlimpic"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+** activity_select_game.xml  //share source
+
+<?xml version="1.0"?>
+
+-<RelativeLayout tools:context="com.example.parkyunho.olimpic.SelectGame" android:background="@color/bright_foreground_inverse_material_light" android:id="@+id/fra" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+-<LinearLayout android:id="@+id/layout" android:layout_height="wrap_content" android:layout_width="fill_parent" android:orientation="horizontal" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+
+<ImageView android:layout_height="40dp" android:layout_width="40dp" android:layout_weight="0" android:src="@drawable/left_1"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_weight="1" android:layout_marginLeft="36dp" android:textSize="35dp" android:text="Select Game" android:textColor="@color/background_floating_material_dark"/>
+
+<ImageView android:layout_height="40dp" android:layout_width="40dp" android:layout_weight="0" android:src="@drawable/right_1"/>
+
+</LinearLayout>
+
+<ImageView android:layout_height="60dp" android:layout_width="100dp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:src="@drawable/oli_1" android:layout_below="@+id/layout"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+** activity_bowling.xml **  //share source
+
+<?xml version="1.0"?>
+
+-<RelativeLayout tools:context="com.example.parkyunho.olimpic.bowling" android:background="@color/bright_foreground_inverse_material_light" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ImageView android:layout_height="100dp" android:layout_width="100dp" android:layout_marginTop="100dp" android:src="@drawable/bowling" android:layout_centerHorizontal="true"/>
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:textSize="50dp" android:layout_weight="1" android:textColor="@color/background_floating_material_dark" android:text="Bowling"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+** activity_archery.xml **  //share source
+
+<?xml version="1.0"?>
+
+-<RelativeLayout tools:context="com.example.parkyunho.olimpic.Archery" android:background="@color/bright_foreground_inverse_material_light" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:textSize="50dp" android:layout_marginLeft="63dp" android:textColor="@color/background_floating_material_dark" android:layout_weight="1" android:id="@+id/textArchery" android:text="Shooting"/>
+
+<ImageView android:layout_height="100dp" android:layout_width="100dp" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:layout_above="@+id/textArchery" android:layout_marginBottom="20dp" android:src="@drawable/shot"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+** activity_play_bowling.xml **  //share source
+
+<?xml version="1.0"?>
+
+-<RelativeLayout tools:context="com.example.parkyunho.olimpic.playBowling" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ImageView android:layout_height="fill_parent" android:layout_width="fill_parent" android:src="@drawable/bowling"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+** activity_play_archery.xml **  //share source
+
+<?xml version="1.0"?>
+
+-<RelativeLayout tools:context="com.example.parkyunho.olimpic.playArchery" android:background="@color/bright_foreground_inverse_material_light" android:paddingBottom="@dimen/activity_vertical_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingLeft="@dimen/activity_horizontal_margin" android:layout_height="match_parent" android:layout_width="match_parent" xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ImageView android:layout_height="fill_parent" android:layout_width="fill_parent" android:src="@drawable/shot"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+** menu_archery ** //share source
+
+<?xml version="1.0"?>
+
+-<menu tools:context="com.example.parkyunho.olimpic.Archery" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:title="@string/action_settings" app:showAsAction="never" android:orderInCategory="100" android:id="@+id/action_settings"/>
+
+</menu>
+
+
+
+
+
+
+
+** menu_bowling **  //share source
+
+<?xml version="1.0"?>
+
+-<menu tools:context="com.example.parkyunho.olimpic.bowling" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:title="@string/action_settings" app:showAsAction="never" android:orderInCategory="100" android:id="@+id/action_settings"/>
+
+</menu>
+
+
+
+
+
+
+
+** menu_main **  //share source
+
+<?xml version="1.0"?>
+
+-<menu tools:context=".MainActivity" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:title="@string/action_settings" app:showAsAction="never" android:orderInCategory="100" android:id="@+id/action_settings"/>
+
+</menu>
+
+
+
+
+
+
+
+** menu_play_archery **  //share source
+
+<?xml version="1.0"?>
+
+-<menu tools:context="com.example.parkyunho.olimpic.playArchery" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:title="@string/action_settings" app:showAsAction="never" android:orderInCategory="100" android:id="@+id/action_settings"/>
+
+</menu>
+
+
+
+
+
+
+
+** menu_play_bowling **  //share source
+
+<?xml version="1.0"?>
+
+-<menu tools:context="com.example.parkyunho.olimpic.playBowling" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:title="@string/action_settings" app:showAsAction="never" android:orderInCategory="100" android:id="@+id/action_settings"/>
+
+</menu>
+
+
+
+
+
+
+
+** menu_select_game **  //share source
+
+<?xml version="1.0"?>
+
+-<menu tools:context="com.example.parkyunho.olimpic.SelectGame" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item android:title="@string/action_settings" app:showAsAction="never" android:orderInCategory="100" android:id="@+id/action_settings"/>
+
+</menu>
+
+
+
+
+
+
+** Archery.java **  //share source
+
+package com.example.parkyunho.olimpic;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class Archery extends ActionBarActivity implements GestureDetector.OnGestureListener {
+
+    private LinearLayout main;
+    private TextView viewA;
+
+    private static final int SWIPE_MIN_DISTANCE = 120;
+    private static final int SWIPE_MAX_OFF_PATH = 250;
+    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+
+    private GestureDetector gestureScanner;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        gestureScanner = new GestureDetector(this);
+        main = new LinearLayout(this);
+        main.setBackgroundColor(Color.GRAY);
+        main.setLayoutParams(new LinearLayout.LayoutParams(320, 480));
+
+        viewA = new TextView(this);
+        viewA.setBackgroundColor(Color.WHITE);
+        viewA.setTextColor(Color.BLACK);
+        viewA.setTextSize(30);
+        viewA.setGravity(Gravity.CENTER);
+        viewA.setLayoutParams(new LinearLayout.LayoutParams(320, 80));
+        main.addView(viewA);
+
+        getSupportActionBar().hide();
+        setContentView(R.layout.activity_archery);
+    }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent me) {
+        return gestureScanner.onTouchEvent(me);
+    }
+
+    public boolean onDown(MotionEvent e) {
+        viewA.setText("-" + "DOWN" + "-");
+        return true;
+    }
+
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) { //opensource
+        try {
+            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
+                return false;
+
+            // right to left swipe
+            if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                Toast.makeText(getApplicationContext(), "Left Swipe", Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(Archery.this, bowling.class );
+                startActivity(in);
+            }
+            // left to right swipe
+            else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                Toast.makeText(getApplicationContext(), "Right Swipe", Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(Archery.this, SelectGame.class );
+                startActivity(in);
+
+            }
+            // down to up swipe
+            else if (e1.getY() - e2.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+                Toast.makeText(getApplicationContext(), "Swipe up", Toast.LENGTH_SHORT).show();
+            }
+            // up to down swipe
+            else if (e2.getY() - e1.getY() > SWIPE_MIN_DISTANCE && Math.abs(velocityY) > SWIPE_THRESHOLD_VELOCITY) {
+                Toast.makeText(getApplicationContext(), "Swipe down", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+
+        }
+        return true;
+    }
+
+    public void onLongPress(MotionEvent e) {
+        Toast mToast = Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT);
+        mToast.show();
+        Intent in = new Intent(Archery.this, playArchery.class );
+        startActivity(in);
+    }
+
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        viewA.setText("-" + "SCROLL" + "-");
+        return true;
+    }
+
+    public void onShowPress(MotionEvent e) {
+        viewA.setText("-" + "SHOW PRESS" + "-");
+    }
+
+    public boolean onSingleTapUp(MotionEvent e) {
+        Toast mToast = Toast.makeText(getApplicationContext(), "Single Tap", Toast.LENGTH_SHORT);
+        mToast.show();
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_archery, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+
+
+
+
+
+** bowling.java **
+
+package com.example.parkyunho.olimpic; //share source
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.support.v7.app.ActionBarActivity;
+import android.view.GestureDetector;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+
+public class bowling extends ActionBarActivity implements GestureDetector.OnGestureListener, TextToSpeech.OnInitListener  {
+
+    // var - TTS
+    private TextToSpeech myTTS;
+
+    // var - swipe
+    private LinearLayout main;
+    private TextView viewA;
+
+    private static final int SWIPE_MIN_DISTANCE = 120;
+    private static final int SWIPE_MAX_OFF_PATH = 250;
+    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+
+    private GestureDetector gestureScanner;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+        setContentView(R.layout.activity_bowling);
+
+        // for swipe
+        gestureScanner = new GestureDetector(this);
+        main = new LinearLayout(this);
+        main.setBackgroundColor(Color.GRAY);
+        main.setLayoutParams(new LinearLayout.LayoutParams(320, 480));
+
+        viewA = new TextView(this);
+        viewA.setBackgroundColor(Color.WHITE);
+        viewA.setTextColor(Color.BLACK);
+        viewA.setTextSize(30);
+        viewA.setGravity(Gravity.CENTER);
+        viewA.setLayoutParams(new LinearLayout.LayoutParams(320, 80));
+        main.addView(viewA);
+
+        // for TTS. open source
+        myTTS = new TextToSpeech(this, this);
+    }
+
+    public void onInit(int status){
+        String text = "볼링";
+        myTTS.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+        myTTS.shutdown();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent me) {
+        return gestureScanner.onTouchEvent(me);
+    }
+
+    public boolean onDown(MotionEvent e) {
+        return true;
+    }
+
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        try {
+            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
+                return false;
+
+            // right to left swipe
+            if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                Intent in = new Intent(bowling.this, SelectGame.class );
+                startActivity(in);
+            }
+            // left to right swipe
+            else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                Intent in = new Intent(bowling.this, Archery.class );
+                startActivity(in);
+            }
+        } catch (Exception e) {    }
+        return true;
+    }
+
+    public void onLongPress(MotionEvent e) {
+        Intent in = new Intent(bowling.this, playBowling.class );
+        startActivity(in);
+    }
+
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        return true;
+    }
+
+    public void onShowPress(MotionEvent e) {
+        viewA.setText("-" + "SHOW PRESS" + "-");
+    }
+
+    public boolean onSingleTapUp(MotionEvent e) { return true;  }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_bowling, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+
+
+
+
+
+** MainActivity.java **  //share source
+
+package com.example.parkyunho.olimpic;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+
+
+public class MainActivity extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
+        beforeIntro();
+    }
+
+    private void beforeIntro(){
+        getWindow().getDecorView().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent in = new Intent(MainActivity.this, SelectGame.class);
+                startActivity(in);
+            }
+        }, 2000);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+
+
+
+
+
+** playArchery.java ** //share source
+
+package com.example.parkyunho.olimpic;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+
+
+public class playArchery extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        getSupportActionBar().hide();
+        setContentView(R.layout.activity_play_archery);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_play_archery, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+
+
+
+
+
+** playBowling.java ** /opensource
+
+package com.example.parkyunho.olimpic;
+
+import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.support.v7.app.ActionBarActivity;
+import android.view.GestureDetector;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class playBowling extends ActionBarActivity implements GestureDetector.OnGestureListener, TextToSpeech.OnInitListener, SensorEventListener {
+
+    // var - Sensor
+    SensorManager sm;
+    Sensor oriSensor; // 방향
+    Sensor accSensor; // 가속도
+    Sensor rotSensor; // 회전
+    Sensor ligSensor; // 밝기
+    Sensor magSensor; // 자기
+    Sensor preSensor; // 압력
+    Sensor proxSensor; // 근접
+    Sensor tempSensor; // 온도
+
+    // var - TTS
+    private TextToSpeech myTTS;
+
+    // var - swipe
+    private LinearLayout main;
+    private TextView viewA;
+
+    private static final int SWIPE_MIN_DISTANCE = 120;
+    private static final int SWIPE_MAX_OFF_PATH = 250;
+    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+
+    private GestureDetector gestureScanner;
+
+    // var - Message for User
+    String initText1 = "볼링게임을 시작합니다.";
+    String initText2 = "화면을 누르면 게임이 시작됩니다.";
+    String initText3 = "튜토리얼을 들으시려면 화면을 길게 눌러주세요.";
+
+    String text1 = "튜토리얼";
+    String text2 = "첫째, 스마트폰을 평행하게 들어주세요.";
+    String text3 = "둘째, 스마트폰을 들고 팔을 뒤로 쭉 뻗어주세요.";
+    String text4 = "셋째, 뒤로 뻗은 팔을 앞으로 내밀며 볼링공을 밀어주세요.";
+
+    String t1 = "빠르게";
+    String t2 = "중간";
+    String t3 = "느리게";
+
+    // var - Sync
+    Boolean check = false;
+    Boolean flag_F = true;  // fast
+    Boolean flag_M = true;  // medium
+    Boolean flag_S = true;  // slow
+    int check_F = 0;
+    int check_M = 0;
+    int check_S = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+        setContentView(R.layout.activity_play_bowling);
+
+        // for Swipe
+        gestureScanner = new GestureDetector(this);
+        main = new LinearLayout(this);
+        main.setBackgroundColor(Color.GRAY);
+        main.setLayoutParams(new LinearLayout.LayoutParams(320, 480));
+
+        viewA = new TextView(this);
+        viewA.setBackgroundColor(Color.WHITE);
+        viewA.setTextColor(Color.BLACK);
+        viewA.setTextSize(30);
+        viewA.setGravity(Gravity.CENTER);
+        viewA.setLayoutParams(new LinearLayout.LayoutParams(320, 80));
+        main.addView(viewA);
+
+        // for TTS
+        myTTS = new TextToSpeech(this, this);
+
+        // for Sensor
+        sm = (SensorManager)getSystemService(SENSOR_SERVICE);
+
+        oriSensor = sm.getDefaultSensor(Sensor.TYPE_ORIENTATION); // 자이로
+        accSensor = sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER); // 가속도
+        rotSensor = sm.getDefaultSensor(Sensor.TYPE_GYROSCOPE); // 회전
+        ligSensor = sm.getDefaultSensor(Sensor.TYPE_LIGHT); // 밝기
+        magSensor = sm.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD); // 자력
+        preSensor = sm.getDefaultSensor(Sensor.TYPE_PRESSURE); // 압력
+        proxSensor = sm.getDefaultSensor(Sensor.TYPE_PROXIMITY); // 근접
+        tempSensor = sm.getDefaultSensor(Sensor.TYPE_TEMPERATURE); // 온도
+    }
+
+    @Override
+    protected void onResume() {
+        // TODO Auto-generated method stub
+        super.onResume();
+
+        sm.registerListener(this, accSensor, SensorManager.SENSOR_DELAY_NORMAL); // 가속도
+        sm.registerListener(this, oriSensor, SensorManager.SENSOR_DELAY_NORMAL); // 방향
+        sm.registerListener(this, rotSensor, SensorManager.SENSOR_DELAY_NORMAL); // 회전
+        sm.registerListener(this, ligSensor, SensorManager.SENSOR_DELAY_NORMAL); // 밝기
+        sm.registerListener(this, magSensor, SensorManager.SENSOR_DELAY_NORMAL); // 자력
+        sm.registerListener(this, preSensor, SensorManager.SENSOR_DELAY_NORMAL); // 압력
+        sm.registerListener(this, proxSensor, SensorManager.SENSOR_DELAY_NORMAL); // 근접
+        sm.registerListener(this, tempSensor, SensorManager.SENSOR_DELAY_NORMAL); // 온도
+    }
+
+    @Override
+    protected void onPause() {
+        // TODO Auto-generated method stub
+        super.onPause();
+        sm.unregisterListener(this);
+    }
+
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+        // TODO Auto-generated method stub
+    }
+
+    @Override //share source
+    public void onSensorChanged(SensorEvent event) { 
+        // TODO Auto-generated method stub
+       if(check){
+           synchronized (this) {
+               //float var0 = event.values[0];
+               float var1 = event.values[1];
+               float var2 = event.values[2];
+
+               switch (event.sensor.getType()) {
+                   case Sensor.TYPE_ACCELEROMETER:
+
+                       if(flag_F){
+                           if(var1 <= -19) {
+                               check_F=1;
+                               flag_M = false;
+                               flag_S = false;
+                           }
+                           if(check_F==1 && var2 < -1){
+                               myTTS.speak(t1, TextToSpeech.QUEUE_FLUSH, null);  // 빠르게
+                           }
+                           flag_M = true;
+                           flag_S = true;
+                       }
+
+                       if(flag_M){
+                           if( (-18<var1 && var1<-6) && (6<=var2 && var2 <=10)){
+                               check_M = 1;
+                               flag_F = false;
+                               flag_S = false;
+                           }
+                           if(check_M==1 && var2 < -1){
+                               myTTS.speak(t2, TextToSpeech.QUEUE_ADD, null);
+                           }
+                           flag_F = true;
+                           flag_S = true;
+                       }
+
+                       if(flag_S){
+                           if( (-18<var1 && var1<-6) && var2<=5){
+                               check_S = 1;
+                               flag_F = false;
+                               flag_M = false;
+                           }
+                           if(check_S==1 && var2 < -1){
+                               myTTS.speak(t3, TextToSpeech.QUEUE_ADD, null);
+                           }
+                           flag_F = true;
+                           flag_M = true;
+                       }
+               }
+           }
+       }
+    }
+    public void onInit(int status){
+        myTTS.speak(initText1, TextToSpeech.QUEUE_FLUSH, null);
+        myTTS.speak(initText2, TextToSpeech.QUEUE_ADD, null);
+        myTTS.speak(initText3, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+        myTTS.shutdown();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent me) {
+        return gestureScanner.onTouchEvent(me);
+    }
+
+    public boolean onDown(MotionEvent e) {
+        viewA.setText("-" + "DOWN" + "-");
+        return true;
+    }
+
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        try {
+            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
+                return false;
+
+            // right to left swipe
+            if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                Toast.makeText(getApplicationContext(), "Left Swipe", Toast.LENGTH_SHORT).show();
+            }
+            // left to right swipe
+            else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                Toast.makeText(getApplicationContext(), "Right Swipe", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+
+        }
+        return true;
+    }
+
+    public void onLongPress(MotionEvent e) {
+        //Toast mToast = Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT);
+        //mToast.show();
+        myTTS.speak(text1, TextToSpeech.QUEUE_ADD, null);
+        myTTS.speak(text2, TextToSpeech.QUEUE_ADD, null);
+        myTTS.speak(text3, TextToSpeech.QUEUE_ADD, null);
+        myTTS.speak(text4, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        viewA.setText("-" + "SCROLL" + "-");
+        return true;
+    }
+
+    public void onShowPress(MotionEvent e) {
+        viewA.setText("-" + "SHOW PRESS" + "-");
+    }
+
+    public boolean onSingleTapUp(MotionEvent e) {
+        //Toast mToast = Toast.makeText(getApplicationContext(), "Single Tap", Toast.LENGTH_SHORT);
+        //mToast.show();
+        check = true;
+        Toast.makeText(getApplicationContext(), "Game Start", Toast.LENGTH_SHORT).show();
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_play_bowling, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+
+
+
+
+
+** SelectGame.java ** //opensource
+
+
+package com.example.parkyunho.olimpic;
+
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.support.v7.app.ActionBarActivity;
+import android.view.GestureDetector;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+
+public class SelectGame extends ActionBarActivity  implements GestureDetector.OnGestureListener, TextToSpeech.OnInitListener{
+
+    // var - TTS
+    private TextToSpeech myTTS;
+
+    // var - swipe
+    private LinearLayout main;
+    private TextView viewA;
+
+    private static final int SWIPE_MIN_DISTANCE = 120;
+    private static final int SWIPE_MAX_OFF_PATH = 250;
+    private static final int SWIPE_THRESHOLD_VELOCITY = 200;
+
+    private GestureDetector gestureScanner;
+
+    // var - Message for User
+    String initText1 = "Olimpic game";
+    String initText2 = "게임을 선택해주세요.";
+    String initText3 = "튜토리얼을 들으시려면 화면을 길게 눌러주세요. ";
+
+    String text0 = "튜토리얼";
+    String text1 = "화면을 오른쪽 또는 왼쪽으로 넘겨 게임을 선택하세요";
+    String text2 = "원하는 게임을 찾으면 화면을 길게 눌러 게임을 시작합니다.";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
+        setContentView(R.layout.activity_select_game);
+
+        // for Swipe
+        gestureScanner = new GestureDetector(this);
+        main = new LinearLayout(this);
+        main.setBackgroundColor(Color.GRAY);
+        main.setLayoutParams(new LinearLayout.LayoutParams(320, 480));
+
+        viewA = new TextView(this);
+        viewA.setBackgroundColor(Color.WHITE);
+        viewA.setTextColor(Color.BLACK);
+        viewA.setTextSize(30);
+        viewA.setGravity(Gravity.CENTER);
+        viewA.setLayoutParams(new LinearLayout.LayoutParams(320, 80));
+        main.addView(viewA);
+
+        // for TTS
+        myTTS = new TextToSpeech(this, this);
+    }
+
+    public void onInit(int status){
+        myTTS.speak(initText1, TextToSpeech.QUEUE_FLUSH, null);
+        myTTS.speak(initText2, TextToSpeech.QUEUE_ADD, null);
+        myTTS.speak(initText3, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    protected void onDestroy(){
+        super.onDestroy();
+        myTTS.shutdown();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent me) {
+        return gestureScanner.onTouchEvent(me);
+    }
+
+    public boolean onDown(MotionEvent e) {  return true; }
+
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+        try {
+            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
+                return false;
+
+            // right to left swipe
+            if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                Intent in = new Intent(SelectGame.this, Archery.class);
+                myTTS.shutdown();
+                startActivity(in);
+                finish();
+            }
+            // left to right swipe
+            else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                myTTS.shutdown();
+                Intent in = new Intent(SelectGame.this, bowling.class);
+                startActivity(in);
+                finish();
+            }
+        } catch (Exception e) { }
+        return true;
+    }
+
+    public void onLongPress(MotionEvent e) {
+        //Toast mToast = Toast.makeText(getApplicationContext(), "Long Press", Toast.LENGTH_SHORT);
+        //mToast.show();
+        myTTS.speak(text0, TextToSpeech.QUEUE_ADD, null);
+        myTTS.speak(text1, TextToSpeech.QUEUE_ADD, null);
+        myTTS.speak(text2, TextToSpeech.QUEUE_ADD, null);
+    }
+
+    public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        return true;
+    }
+
+    public void onShowPress(MotionEvent e) {
+
+    }
+
+    public boolean onSingleTapUp(MotionEvent e) {
+        return true;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_select_game, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
